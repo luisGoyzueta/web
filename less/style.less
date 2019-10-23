@@ -1,0 +1,55 @@
+@typeFont: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+@import "mixins";
+@import "content";
+
+/* This to make sure all browses (even pop-up browse) obtain the sizing classes (not on mobile) */
+.mxsmall { 
+    @media @desktop { .flex(0.2 2.5 0px)!important; } 
+    @media @tablet { .flex(0.2 2.5 0px)!important; } 
+    @media @mobile { .flex(0.2 2.5 0px)!important; } 
+}
+.small { 
+    @media @desktop { .flex(1 2 0px)!important; } 
+    @media @tablet { .flex(1 2 0px)!important; } 
+    @media @mobile { .flex(1 2 0px)!important; } 
+}
+.medium { 
+    @media @desktop { .flex(1.5 1 0px)!important; } 
+    @media @tablet { .flex(1.5 1 0px)!important; } 
+    @media @mobile { .flex(1.5 1 0px)!important; } 
+}
+.large { 
+    @media @desktop { .flex(2.2 1 0px)!important; } 
+    @media @tablet { .flex(2.2 1 0px)!important; } 
+    @media @mobile { .flex(2.2 1 0px)!important; } 
+}
+
+@white: #ffffff;
+@black: #000000;
+@gris: #cccccc;
+
+@gradientHome1: #3949ab ;
+@gradientHome2: #060c21 ;
+@gradientHome3: #8e24aa ;
+
+@bgMenu: #0277bd;
+@bgMenuHover: #004c8c;
+
+@shadowHeader:0 4px 4px rgba(0, 0, 0, 0.1);
+@colorPrimary: #002249;
+@colorSecundary: #69a1bb;
+@colorTerciary: #b7c3d6;
+@btnColor: #0c59db;
+@bgBox: #f7f6ff;
+@bgBox2: #a9c7ec;
+@bgShadowText: #151212;
+@gradientPrimary: #1976d2;
+@gradientSecundary: #FFF;
+@colorCliente: #666666;
+@borderColorInput: #999999;
+@borderColorCliente: #eeeeee;
+@borderColorContacto: #e7e5f7;
+@bgContact: #09c3b3;
+@bgFooter: #1976d2;
+

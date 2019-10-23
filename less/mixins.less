@@ -1,0 +1,188 @@
+/*----------------------------     LESS MIXINS    -------------------------------*/
+/*----------------------     BROWSERS COMPATIBILITY    --------------------------*/
+
+@desktop: ~"(min-width: 991px)";
+@tablet : ~"(max-width: 990px) and (min-width:640px)";
+@mobile : ~"(max-width: 640px)";
+
+.appearance (@type) {
+	appearance        : @type;
+	-moz-appearance   : @type;
+	-webkit-appearance: @type;
+}
+
+.transition(@time ) {
+	-webkit-transition: all @time;
+	-moz-transition   : all @time;
+	transition        : all @time;
+}
+
+.opacity(@value ) {
+	opacity        : @value;
+	-webkit-opacity: @value;
+	-moz-opacity   : @value;
+	-ms-opacity    : @value;
+	-o-opacity     : @value;
+}
+
+.transform(@args...) {
+	-webkit-transform: @args;
+	-moz-transform   : @args;
+	-ms-transform    : @args;
+	-o-transform     : @args;
+	transform        : @args;
+}
+
+.animation(@args...) {
+	-webkit-animation: @args;
+	-moz-animation   : @args;
+	-ms-animation    : @args;
+	-o-animation     : @args;
+	animation        : @args;
+}
+
+.boxSizing(@value: border-box) {
+	-webkit-box-sizing: @value;
+	-moz-box-sizing   : @value;
+	box-sizing        : @value;
+}
+
+.shadow(@shadows...) {
+	-webkit-box-shadow: @shadows;
+	-moz-box-shadow   : @shadows;
+	box-shadow        : @shadows;
+}
+
+.shadowExtra(@shadows, @shadows2, @shadows3) {
+	-webkit-box-shadow: @shadows, @shadows2, @shadows3;
+	-moz-box-shadow   : @shadows, @shadows2, @shadows3;
+	box-shadow        : @shadows, @shadows2, @shadows3;
+}
+
+.borderRadius(@pixel...) {
+	-webkit-border-radius: @pixel;
+	-moz-border-radius   : @pixel;
+	border-radius        : @pixel;
+}
+
+.displayFlex() {
+	display: box;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.displayInlineFlex() {
+	display: inline-box;
+	display: -webkit-inline-box;
+	display: -moz-inline-box;
+	display: -ms-inline-flexbox;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+}
+
+.flexFlow(@rowCol...) {
+	-webkit-flex-flow: @rowCol;
+	-moz-flex-flow   : @rowCol;
+	-ms-flex-flow    : @rowCol;
+	flex-flow        : @rowCol;
+}
+
+.flexDirection(@basic...) {
+	-webkit-flex-direction: @basic;
+	-moz-flex-direction   : @basic;
+	-ms-flex-direction    : @basic;
+	flex-direction        : @basic;
+}
+
+.flexWrap(@basic...) {
+	-webkit-flex-wrap: @basic;
+	-moz-flex-wrap   : @basic;
+	-ms-flex-wrap    : @basic;
+	flex-wrap        : @basic;
+}
+
+.flex(@basis...) {
+	box-flex        : @basis;
+	-webkit-box-flex: @basis;
+	-moz-box-flex   : @basis;
+	-webkit-flex    : @basis;
+	-moz-flex       : @basis;
+	-ms-flex        : @basis;
+	flex            : @basis;
+}
+
+.order(@value) {
+	-webkit-box-ordinal-group: @value;
+	-moz-box-ordinal-group   : @value;
+	-webkit-order            : @value;
+	-moz-order               : @value;
+	-ms-flex-order           : @value;
+	order                    : @value;
+}
+
+.flexJustify(@justify, @justify2) {
+	flex-pack              : @justify;
+	-ms-flex-pack          : @justify;
+	-webkit-justify-content: @justify2;
+	justify-content        : @justify2;
+}
+
+.alignItems(@align2: start, @align: flex-start) {
+	-ms-flex-align       : @align2;
+	-webkit-align-items  : @align;
+	align-items          : @align;
+	-webkit-align-content: @align;
+	align-content        : @align;
+}
+
+.ellipsis() {
+	overflow     : hidden;
+	white-space  : nowrap;
+	text-overflow: ellipsis;
+}
+
+.linerGradient(@deg, @color1, @color2) {
+	background: -moz-linear-gradient(@deg, @color1, @color2);
+	background: -webkit-linear-gradient(@deg, @color1, @color2);
+	background: -o-linear-gradient(@deg, @color1, @color2);
+	background: -ms-linear-gradient(@deg, @color1, @color2);
+	background: linear-gradient(@deg, @color1, @color2);
+}
+
+.gradientColor(@color1, @color2) {
+	background: @color1;
+	/* Old browsers */
+	background: -moz-linear-gradient(left, @color1 0%, @color2 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, @color1), color-stop(100%, @color2));
+	background: -webkit-linear-gradient(left, @color1 0%, @color2 100%);
+	background: -o-linear-gradient(left, @color1 0%, @color2 100%);
+	background: -ms-linear-gradient(left, @color1 0%, @color2 100%);
+	background: linear-gradient(to right, @color1 0%, @color2 100%);
+}
+
+.transitionEffect(@time, @efecto ) {
+	-webkit-transition: all @time @efecto;
+	-moz-transition   : all @time ea@efecto;
+	-o-transition     : all @time @efecto;
+	-ms-transition    : all @time @efecto;
+	transition        : all @time @efecto;
+}
+
+.rotate3d(@grados ) {
+	-webkit-transform: rotate3d(0, 1, 0, @grados);
+	-moz-transform   : rotate3d(0, 1, 0, @grados);
+	-o-transform     : rotate3d(0, 1, 0, @grados);
+	-ms-transform    : rotate3d(0, 1, 0, @grados);
+	transform        : rotate3d(0, 1, 0, @grados);
+}
+
+.rotate(@grados ) {
+	-webkit-transform: rotate(@grados);
+	-moz-transform   : rotate(@grados);
+	-o-transform     : rotate(@grados);
+	-ms-transform    : rotate(@grados);
+	transform        : rotate(@grados);
+}
